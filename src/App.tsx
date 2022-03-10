@@ -8,6 +8,8 @@ import square_img from "./images/vector-logo.png";
 import xona from "./images/xona.png";
 import funeral from "./images/funeral.png";
 import ability from "./images/ability.JPG";
+import mace from "./images/maceGoool.png";
+import tomb from "./images/tombTomb.png";
 import menu_img    from "./images/menu.png";
 import gallery from "./images/gallery.png";
 import ConnectWallet from "./components/ConnectWallet";
@@ -75,7 +77,7 @@ function App() {
             <h1>The Team</h1>
             <div className="row">
                 <div className="col">
-                <img className="team-member" src={square_img} alt=""/>
+                <img className="team-member" src={tomb} alt=""/>
                 <h3>Tombheads</h3>
                 </div>
                 <div className="col">
@@ -91,7 +93,7 @@ function App() {
                 <h3>Xona</h3>
                 </div>
                 <div className="col">
-                <img className="team-member" src={square_img} alt=""/>
+                <img className="team-member" src={mace} alt=""/>
                 <h3>Mace Papa</h3>
                 </div>
                 <div className="col">
