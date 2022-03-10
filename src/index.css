@@ -1,13 +1,481 @@
-body {
+/* The Cult was here. 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@                                                  @@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+/* Global */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+li,
+a,
+button,
+h1 {
+  font-family: "Bangers", cursive;
+}
+.logo {
+  font-family: "Bangers", cursive;
+  color: #fff576;
+}
+h3 {
+  font-family: "Bangers", cursive;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+button a {
+  color: #fff;
+}
+button a:hover {
+  color: #fff;
+}
+.logo {
+  font-size: 42px;
+  margin-right: auto;
+}
+.logo h4 {
+  display: inline;
+  font-size: 32px;
+  color: black;
+  font-weight: bolder;
+}
+.logo a:hover {
+  color: fff576;
+}
+a {
+  color: #fff576;
+  cursor: pointer;
+}
+button {
+  text-decoration: none;
+  outline: none;
+  border: 0;
+}
+button:hover {
+  color: #fff576;
+}
+ul {
+  list-style: none;
+}
+body html {
+  overflow-x: initial !important;
+  min-height: 100%;
+}
+.active {
+  font-weight: bold;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 75px;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+  background-color: #000000;
+  box-shadow: 0px 0px 5px black;
+}
+.navbar button {
+  padding: 5px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar button a {
+  padding: 5px;
+  width: 100px;
+  border-radius: 15px;
+  color: #000000;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar button:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 5.1px 5.1px rgba(138, 138, 138, 0.349);
+}
+.navbar button:active {
+  transform: scale(1);
+  box-shadow: 0px 5px 5px rgba(138, 138, 138, 0.349);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  margin: 0 10px;
+  display: inline-block;
+  padding: 0px 20px;
+}
+.nav_links li a {
+  transition: all 0.3 ease 0s;
+}
+header {
+  width: 100vw;
+  height: 100vh;
+  background: #fff576;
+  background-image: url("./images/tdom-bg.png");
+  background-position: center top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.header-content {
+  margin-bottom: 150px;
+  color: whitesmoke;
+  text-align: center;
+}
+header h1 {
+  font-size: 112px;
+  color: #ffffff;
+}
+header h3 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+header button {
+  padding: 10px 20px 10px 10px;
+}
+.mint-text button {
+  padding: 5px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+}
+.mint-text button:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 5.1px 5.1px rgba(138, 138, 138, 0.349);
+}
+.mint-text button:active {
+  transform: scale(1);
+  box-shadow: 0px 5px 5px rgba(138, 138, 138, 0.349);
+}
+.mint-text button a {
+  padding: 5px;
+  width: 100px;
+  border-radius: 15px;
+  color: #000000;
+  font-size: 18px;
+  cursor: pointer;
+}
+.header-content p {
+  font-size: 2vmin;
+  color: black;
+  margin-bottom: 30px;
+}
+.mint-text {
+  margin-right: 30px;
+}
+.mint-text h1 {
+  font-size: 20px;
+  text-align: left;
+}
+/*Dashboard Button*/
+.header-content {
+  width: 100%;
+}
+section {
+  width: 80%;
+  margin: 80px auto;
+}
+section .info {
+  width: 80%;
+}
+.title {
+  text-align: left;
+  font-size: 4vmin;
+  color: #000;
+  margin-bottom: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  justify-content: space-between;
+}
+.row .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row .col img {
+  width: 80%;
+  border-radius: 0px;
+}
+.row .col p {
+  text-align: left;
+}
+.drops .row {
+  margin-top: 50px;
+}
+.drops h1 {
+  margin-bottom: 10px;
+}
+/* TEAM */
+.team .row .col img {
+  border-radius: 50%;
+  transition: 0.3s ease;
+  box-shadow: 0px 2px 5px grey;
+  max-height: 400px;
+  max-width: 400px;
+}
+.drops .row .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team .row .col img:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 2.2px 5.2px grey;
+}
+.team .row .col img:active {
+  transform: scale(1);
+  box-shadow: 0px 2.1px 5.1px grey;
+}
+.team .rotating-hosts img {
+  border-radius: 50%;
+  min-height: 100px;
+  min-width: 100px;
+  display: flex;
+}
+.team .team .col p {
+  text-align: left;
+}
+.team .row {
+  margin-top: 50px;
+}
+.team h1 {
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+.team h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+h1 {
+  font-weight: lighter;
+  font-size: 36px;
+}
+h4 {
+  font-size: 18px;
+  margin: 20px auto;
+  font-weight: 1;
+  color: grey;
+}
+p {
+  font-size: 2vmin;
+  color: grey;
+  padding: 0px 40px;
+}
+section .info .title {
+  background-color: #fff576;
+}
+section .podcasts {
+  width: 100%;
+}
+.card {
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #fff576;
+  width: 350px;
+  border-radius: 15px;
+  text-align: center;
+  position: center;
+  box-shadow: 0px 10px 20px rgba(138, 138, 138, 0.349);
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 10.1px 20.1px rgba(138, 138, 138, 0.349);
+}
+.card:active {
+  transform: scale(1);
+  box-shadow: 0px 10px 20px rgba(138, 138, 138, 0.349);
+}
+.card h2 {
+  color: black;
+  font-weight: lighter;
+  padding-top: 10px;
+  font-size: 18px;
+}
+.card h1 {
+  font-size: 72px;
+  padding-bottom: 10px;
+}
+.card p {
+  padding-top: 15px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #fff576;
+  margin-bottom: 10px;
+}
+.bottom-card {
+  background-color: black;
+  border-radius: 0px 0px 15px 15px;
+}
+.card button {
+  outline: none;
+  padding-bottom: 20px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: black;
+  color: rgb(226, 226, 226);
+  font-size: 24px;
+  cursor: pointer;
+}
+.card button:hover {
+  color: white;
+}
+.footer {
+  width: 100%;
+  min-height: 100px;
+  height: 100px;
+  padding: 20px 80px;
+  margin: 0;
+  background: #000000;
+  text-align: center;
+  margin-bottom: 0px;
+}
+/*
+Possible gradient for footer
+linear-gradient(to right, #446e61, #b5ddeb);
+*/
+.footer p {
+  color: whitesmoke;
+  margin: 20px auto;
+}
+/* MENU BUTTON */
+.menu-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+/* ANIMATIONS */
+.social-links img {
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+.social-links {
+  text-align: center;
+}
+li:hover {
+  color: #b5ddeb;
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styling for mobile */
+@media only screen and (max-width: 850px) {
+  .menu-btn {
+    display: block;
+    margin-top: -15px;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    padding: 0px;
+    color: white;
+  }
+  p {
+    font-size: 20px;
+  }
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background: black;
+    margin-top: -900px;
+    padding: 0px;
+  }
+  .mobile-menu {
+    margin-top: 0px;
+  }
+  header {
+    margin-top: 75px;
+  }
+  header h1 {
+    margin-top: 225px;
+    margin-bottom: 10px;
+    font-size: 92px;
+  }
+  .nav-links li {
+    margin: 30px auto;
+  }
+
+  /* ROADMAP */
+  .drops .row {
+    flex-direction: column;
+  }
+  .drops .row .col {
+    margin: 20px auto;
+  }
+  .wallet .row {
+    flex-direction: column;
+  }
+  .wallet .row .col {
+    margin: 20px auto;
+  }
+  .roadmap {
+    max-height: 300px;
+  }
+  .footer {
+    padding: 10px;
+  }
 }
