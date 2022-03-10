@@ -7,7 +7,7 @@ import twitter_img from "./images/twitter.png";
 import square_img from "./images/vector-logo.png";
 import xona from "./images/xona.png";
 import funeral from "./images/funeral.png";
-import ability from "./images/ability.JPG";
+import ability from "./images/ability.png";
 import mace from "./images/maceGoool.png";
 import tomb from "./images/tombTomb.png";
 import menu_img    from "./images/menu.png";
