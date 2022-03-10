@@ -66,7 +66,7 @@ export const mint = async (dispatch:any) => {
     const cost = 2;
     const connectedPoapContract = await poapContract.connect(signer);
     const tx = await connectedPoapContract.mint(
-      {"value": ethers.utils.parseUnits(cost.toString(),'ether')}
+      {gasLimit: 300000, "value": ethers.utils.parseUnits(cost.toString(),'ether')}
     );
     dispatch({type: 'isMinting', content: false});
   } catch(error) {
